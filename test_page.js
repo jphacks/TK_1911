@@ -1,17 +1,20 @@
 // JavaScript source code
 
 var express = require('express');
+const fs = require('fs');
 
 var router = express.Router();
 var app = express();
 const path = require('path');
 var bodyParser = require('body-parser');
 
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-//app.use(express.static('public'));
+app.use(express.static('./public'));
 
 var shelter_data = {
     name: "",
@@ -30,13 +33,14 @@ var server = app.listen(3000, 'localhost', function () {
 
 app.get("/", function (req, res) {
     console.log("get");
-    res.sendFile(__dirname + "/map.html");
+    //console.log("/map.html")
+    //console.log(__dirname + "\\map.html");
+    res.sendFile(__dirname + '/map.html');
 });
 
-app.get("/index.html", function (req, res) {
-    console.log("get");
-    //res.sendFile(__dirname + "/public/index.html");
-    res.send("");
+app.get("/get_shelter_Data", function (req, res) {
+    console("get");
+    res.send("OK");
 });
 
 app.post("/", function (req, res) {
@@ -45,7 +49,6 @@ app.post("/", function (req, res) {
     console.log(data);
 
     shelter_data.count = req.body.count;
-    
     shelter_data.name = req.body.name;
     console.log(shelter_data);
     res.send("get data");

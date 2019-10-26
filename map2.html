@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>map</title>
+    <link rel="googlemap" href="googlemap.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        #container {
+            width: 1024px;
+            margin: 100px auto;
+        }
+
+        #sample {
+            width: 1024px;
+            height: 500px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!---
+        <button id="my-button">ここをクリック</button>;
+        <div id="element_to_pop_up">よお！</div>
+        -->
+        <div id="sample"></div>
+    </div>
+    <script>
+        var map;
+        var maeker;
+        var center = {
+            lat: 35.748332, // 緯度
+            lng: 139.806168 // 経度
+        };
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('sample'), { // #sampleに地図を埋め込む
+                center: center,
+                zoom: 19 // 地図のズームを指定
+            });
+
+            marker = new google.maps.Marker({
+                position: center,
+                map: map
+            }); //マーカーの設定
+
+            var contentString = '<div id="content"><h3 id="facilityName" class="facilityName">東京電機大学</h3><div id="bodyContent"><p>現在の人数:500人/2500人</p><button id="my-button">詳細を見る</button><div id="element_to_pop_up">よお！</div></div></div>';
+
+            infoWindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+            infoWindow.open(map, marker); //吹き出しの表示
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbHitn1Up8RWo4gl3YBcq6QGLd-TMUumk"></script>
+    <script type="text/javascript" src="jquery-bpopup.min.js"></script>
+
+    <div class="side-bar">
+    </div>
+</body>
+
+</html>

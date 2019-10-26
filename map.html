@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sample_GoogleMap</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJvpYMZ754MjP29-Foc1T1P2dmyi_tLj4"></script>
+
+    <style>
+        html {
+            height: 100%
+        }
+
+        body {
+            height: 100%
+        }
+
+        #map {
+            height: 100%;
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script>
+        var MyLatLng = new google.maps.LatLng(35.748675, 139.806290);
+        var Options = {
+            zoom: 18,      //地図の縮尺値
+            center: MyLatLng,    //地図の中心座標
+            mapTypeId: 'roadmap'   //地図の種類
+        };
+        var map = new google.maps.Map(document.getElementById('map'), Options);
+        savePosition();
+
+        function savePosition() {
+            if (!navigator.geolocation) {
+                console.log("gpsが対応していません");
+                return 0;
+            }
+            pos = navigator.geolocation.getCurrentPosition(success);
+            console.log(pos);
+        }
+        function success(pos) {
+            var crd = pos.coords;
+            console.log('Your current position is:');
+            console.log(`Latitude : ${crd.latitude}`);
+            console.log(`Longitude: ${crd.longitude}`);
+            console.log(`More or less ${crd.accuracy} meters.`);
+
+            var center = {
+                lat: crd.latitude,
+                lng: crd.longitude
+            };
+
+            marker = new google.maps.Marker({ // マーカーの追加
+                position: center, // マーカーを立てる位置を指定
+                map: map // マーカーを立てる地図を指定
+            });
+        }
+    </script>

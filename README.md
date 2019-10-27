@@ -36,18 +36,12 @@ KainoMeは近隣の避難所をマップ上に表示させ、ユーザは自分�
 #### 1. 人の検知
 避難所の出入口にカメラを設置。OpenCV(顔認識システム)により人の流入を検知し、避難所に来た人の人数をアプリに送る。
 
-<img src="./material/camera.jpg" width="300">
-
 撮影に使用したUSBカメラ
 
 #### 2. CO₂濃度の検知
 NETATMOウェザーステーションを避難所に設置し、CO₂濃度情報をアプリへ送る。CO₂の濃度で人数の多少や活動量が分かり、濃度に応じてアプリ内の顔のマークが変化する。顔のマークの種類は3種類。
 
-<img src="./material/Netatmo.jpg" width="300" title="CO₂濃度測定に使用したNetatmo Weather Station">
-
-<img src="./material/niko.png" width="300">
-<img src="./material/sira.png" width="300">
-<img src="./material/naki.png" width="300">
+<img src="./material/niko.png" width="200"><img src="./material/sira.png" width="200"><img src="./material/naki.png" width="200">
 
 参考文献：
 [COとCO2濃度の人体への危険度に関して](https://www.san-eee.com/measuring/co%E3%81%A8co2%E6%BF%83%E5%BA%A6%E3%81%AE%E4%BA%BA%E4%BD%93%E3%81%B8%E3%81%AE%E5%8D%B1%E9%99%BA%E5%BA%A6%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6/)

@@ -25,7 +25,7 @@ def capture():
             count = count + face
             print("count:" + str(count))
         
-        if(cv2.waitKey(1000)&0xFF == ord('q')):
+        if(cv2.waitKey(250)&0xFF == ord('q')):
             print("finish")
             break
     
@@ -50,7 +50,7 @@ def cascade_face(img):
         return 0,img
 
     for (x,y,w,h) in front_face_list:
-        print("[x,y] = %dqq,%d [w,h] = %d,%d" %(x, y, w, h))
+        #print("[x,y] = %dqq,%d [w,h] = %d,%d" %(x, y, w, h))
         cv2.rectangle(img, (x,y), (x+w, y+h), (0, 0, 255), thickness=10)
 
     for (x,y,w,h) in front_face_list:

@@ -1,0 +1,74 @@
+body{
+    font-family:'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック',sans-serif;
+    color:#37373e;
+}
+.container {
+    display: grid;
+    width:1200px;
+    height:800px;
+    grid-template-rows: 250px 250px 250px 300px;
+    grid-template-columns: 340px 400px;
+    gap: 8px;
+}
+
+.facility-pic,left-info,.top,.middle,.bottom,.right-info{
+    border-radius: 10px;
+}
+
+.header{
+    letter-spacing: 3px;
+}
+
+.top{
+    padding: 30px;
+}
+
+a.tel{
+    font-size: 120%;
+    padding: 60px;
+}
+
+
+.left-info,.middle,.bottom,.right-info{
+    padding:15px 30px;
+    letter-spacing: 3px;
+}
+
+img.facility-pic{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height:250px;
+    width:340px;
+    object-fit: cover;
+}
+
+.left-info {
+    border-radius: 10px;
+    grid-row: 2/4;
+    grid-column: 1/2;
+    background: rgb(255,249,176);
+    border-: solid 10px rgb(222, 200, 140);
+}
+
+.top{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background: white;
+}
+
+.middle{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background: rgb(186,227,249);
+}
+
+.bottom{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    background: rgb(186,227,249);
+}
+.right-info{
+    grid-row: 1/4;
+    grid-column: 3/4;
+    background: rgb(249,209,203);
+}

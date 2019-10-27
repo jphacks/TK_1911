@@ -13,14 +13,17 @@ data = {"count": 0,"name": "東京電機大学"}
 
 
 def get_count(count):
-    data["count"] = count
+    print(data["count"])
+    data["count"] = count + data["count"]
     send_data.send("http://127.0.0.1:3000",data)
 
 def roop():
     count = 0
-    while True:
-        count = capture_face_count.capture()
-        get_count()
+    
+    count = capture_face_count.capture()
+    get_count(count)
+    
 
 
-get_count(1)
+roop()
+#get_count(30)

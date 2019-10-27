@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample_GoogleMap</title>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJvpYMZ754MjP29-Foc1T1P2dmyi_tLj4"></script>
-
+    <script src=""></script>
+    
     <style>
+        .heads {
+            background-color: aquamarine;
+        }
+
         #container {
-            width: 1024px;
-            margin: 100px auto;
+            width: 100vw;
+            //margin: 50px auto;
         }
 
         html {
@@ -22,16 +25,92 @@
         }
 
         #map {
-            width: 1024px;
-            height: 500px;
+            width: 100vw;
+            height: 800px;
+        }
+
+        .image {
+            display: inline-block;
+        }
+
+        #time {
+            float: right;
+            font-size: 30px;
+        }
+
+        head {
+            position: relative;
+            width: 100vw;
+            *display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        img.logo {
+            display: inline;
+            margin: 10px
+        }
+
+        p.subtitle {
+            position: absolute;
+            top: 30px;
+            display: inline-block;
+            font-size: 25px
+        }
+
+        .family-member {
+            display: inline;
+            margin: 0px 300px;
+        }
+
+        #copyright {
+            width: 100vw;
+            height: 100px;
+            background-color: black;
+            color: white;
+            text-align: center; 
+            line-height:50px;
         }
     </style>
 </head>
 
 <body>
+    <div class="heads">
+        <img class="logo" src="/image/logo.png" alt="KainoMe" width=30%>
+        <p class="subtitle">避難状況共有アプリ</p>
+        <div class="family-member">
+            <img class="mom" src="/image/mother_logo.png" alt="Mom" width=7%>
+            <img class='dad' src="/image/father_logo.png" alt="Dad" width=7%>
+        </div>
+        <h2 id="time">
+            <script>
+                time();
+                function time() {
+                    var now = new Date();
+                    document.getElementById("time").innerHTML = now.toLocaleString();
+                }
+                setInterval('time()', 1000);
+            </script>
+        </h2>
+    </div>
+
     <div id="container">
         <div id="map"></div>
     </div>
+    <div id="copyright">Copyright©LucksFer</div>
+
     <script src="map-script.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        var count = "<%= count %>";
+        var co2 = "<%= co2 %>";
+        console.log(count);
+        console.log(co2);
+
+        $(function () {
+            set(count, co2);
+            initMap();
+        });
+    </script>
 </body>
 </html>

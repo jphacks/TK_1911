@@ -1,6 +1,6 @@
 # KainoMe
 
-![rogo](./material/)
+![rogo](./material/2019-10-27 12.32.29.png)
 [動画リンク](https://youtu.be/-p-m4pPwrKY)
 
 ## 製品概要

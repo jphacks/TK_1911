@@ -74,4 +74,4 @@ Netatmoウェザーステーションを避難所に設置し、CO₂濃度情�
 * ロゴ，アイコンなどのマテリアル
 
 参考文献：
-COとCO2濃度の人体への危険度に関して　https://www.san-eee.com/measuring/co%E3%81%A8co2%E6%BF%83%E5%BA%A6%E3%81%AE%E4%BA%BA%E4%BD%93%E3%81%B8%E3%81%AE%E5%8D%B1%E9%99%BA%E5%BA%A6%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6/
+[COとCO2濃度の人体への危険度に関して](https://www.san-eee.com/measuring/co%E3%81%A8co2%E6%BF%83%E5%BA%A6%E3%81%AE%E4%BA%BA%E4%BD%93%E3%81%B8%E3%81%AE%E5%8D%B1%E9%99%BA%E5%BA%A6%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6/)

@@ -1,6 +1,7 @@
 # KainoMe
 
-[![Product Name](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
+![rogo](./material/)
+[動画リンク](https://youtu.be/-p-m4pPwrKY)
 
 ## 製品概要
 ### 避難所 X Tech
